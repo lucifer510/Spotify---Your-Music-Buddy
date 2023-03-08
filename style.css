@@ -1,118 +1,152 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Varela+Round&display=swap");
 
-body{
-    background-color: lightgreen;
+body {
+  background-color: lightgreen;
 }
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-nav{
-    font-family: 'Montserrat', sans-serif;
-    color: aliceblue;
-    position: relative;;
+nav {
+  font-family: "Montserrat", sans-serif;
+  color: aliceblue;
+  position: relative;
 }
-nav ul{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    background-color: #333;
-    height: 65px;
+nav ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  background-color: #333;
+  height: 65px;
 }
-nav ul li{
-    padding: 0 11px;
+nav ul li {
+  padding: 0 11px;
 }
-.brand img{
-    width: 44px;
-    padding: 0 15px 0 8px;
+.brand img {
+  width: 44px;
+  padding: 0 15px 0 8px;
 }
-.brand{
-    display: flex;
-    align-items: center;
-    font-weight: bolder;
-    font-size: 1.3rem;
+.brand {
+  display: flex;
+  align-items: center;
+  font-weight: bolder;
+  font-size: 1.3rem;
 }
-.container{
-    display: flex;
-    margin: 23px auto;
-    width: 70%;
-    min-height: 72.5vh;
-    background-color: black;
-    color: white;
-    font-family: 'Varela Round', sans-serif;
-    border-radius: 12px;
-    padding: 34px;
-    background-image: url('bg.jpg');
-    background-size: cover;
+.container {
+  display: flex;
+  margin: 23px auto;
+  width: 70%;
+  min-height: 72.5vh;
+  background-color: black;
+  color: white;
+  font-family: "Varela Round", sans-serif;
+  border-radius: 12px;
+  padding: 34px;
+  background-image: url("bg.jpg");
+  background-size: cover;
 }
-.bottom{
-    position: sticky;
-    height:100px;
-    background-color: #333;
-    bottom: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    flex-direction: column;
+.bottom {
+  position: sticky;
+  height: 100px;
+  background-color: #333;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-direction: column;
 }
-.icon{
-    margin-top: 14px;
+.icon {
+  margin-top: 14px;
 }
-.icon i{
-    cursor: pointer;
+.icon i {
+  cursor: pointer;
 }
-.bottom ul{
-    display: flex;
-    align-items: center;
-    list-style: none;
-    justify-content: space-around;
+.bottom ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-around;
 }
 input#myProgressBar {
-    width: 80vw;
-    cursor: grab;   
+  width: 80vw;
+  cursor: grab;
 }
-.songItemContainer{
-    margin-top: 74px;
+.songItemContainer {
+  margin-top: 74px;
 }
 .songItem {
-    height: 50px;
-    display: flex;
-    background-color: rgba(111, 111, 111,0.9 );
-    border-radius: 10px;
-    padding: 10px;
-    width: 100%;
-    color: #333;
-    margin: 12px 0;
-    justify-content: space-between;
-    align-items: center;
+  height: 50px;
+  display: flex;
+  background-color: rgba(111, 111, 111, 0.9);
+  border-radius: 10px;
+  padding: 10px;
+  width: 100%;
+  color: #333;
+  margin: 12px 0;
+  justify-content: space-between;
+  align-items: center;
 }
-.songItem img{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 10px;
+.songItem img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
-.timeStamp{
-    margin: 0 23px;
+.timeStamp {
+  margin: 0 23px;
 }
-.timeStamp i{
-    margin-left: 10px;
-    cursor: pointer;
+.timeStamp i {
+  margin-left: 10px;
+  cursor: pointer;
 }
-.songInfo{
-    font-family: 'Varela Round', sans-serif;
-    position: absolute;
-    left: 10vw;
-    font-size: 20px;
+.songInfo {
+  font-family: "Varela Round", sans-serif;
+  position: absolute;
+  left: 10vw;
+  font-size: 20px;
 }
-.songInfo img{
-    opacity: 0;
-    transition: opacity 0.4s ease-in;
+.songInfo img {
+  opacity: 0;
+  transition: opacity 0.4s ease-in;
 }
-i.fa-2x.fa-solid.fa-forward-fast{
-    margin-left: 13px;
+i.fa-2x.fa-solid.fa-forward-fast {
+  margin-left: 13px;
 }
 i.fa-2x.fa-solid.fa-backward-fast {
-    margin-right: 13px;
+  margin-right: 13px;
+}
+
+@media screen and (max-width: 896px) {
+  .songInfo {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 496px) {
+  #time {
+    display: none;
+  }
+}
+@media screen and (max-width: 427px) {
+  .bottom {
+    height: 124px;
+  }
+  img {
+    display: none;
+  }
+  .songName {
+    font-size: 18px;
+  }
+  .icon {
+    margin-top: 5px;
+    position: fixed;
+    bottom: 6px;
+  }
+  span#masterSongName {
+    position: fixed;
+    bottom: 85px;
+    left: 28%;
+    font-size: 18px;
+  }
 }
